@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.background{
+    background-color: black;
+    height: 100vw;
+    width: 100vw;
+    
+  
+}
+.background h1{
+    color: aliceblue;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    }
