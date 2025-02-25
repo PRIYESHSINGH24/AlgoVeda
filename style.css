@@ -1,3 +1,4 @@
+  
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +16,8 @@
     align-items: center;
     text-align: center;
     padding: 20px;
+    font-size: 150%;
+
 }
 
 .header {
@@ -39,6 +42,7 @@
 .logo {
     font-size: 2rem;
     font-weight: bold;
+    font-size: 170%;
     color: #ff0000;
     text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
     white-space: nowrap;
@@ -50,17 +54,24 @@
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 330%;
     font-weight: bold;
+
     color: #ff0000;
     margin-bottom: 10px;
     text-shadow: 0 2px 8px rgba(255, 0, 0, 0.6);
+    font-family: "Dancing Script", serif; 
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+
 }
 
 h4 {
     font-size: 1.8rem;
-    color: #ffffff;
+    color: #bbbbbb;
     margin-bottom: 20px;
+    letter-spacing: 0.3rem;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -79,6 +90,7 @@ h4 {
     transition: 0.3s ease-in-out, transform 0.3s;
     display: inline-block;
 }
+
 
 .btn-17:hover {
     color: #ff0000;
@@ -158,7 +170,9 @@ h4 {
         padding: 0 20px;
     }
     .background h1 {
-        font-size: 2.8rem;
+        /* font-size: 2.8rem; */
+        font-size: 250%;
+
     }
     .background h4 {
         font-size: 1.5rem;
@@ -195,6 +209,7 @@ h4 {
         display: flex;
     }
     .background h1 {
+        font-family: "Dancing Script", serif;
         font-size: 2.3rem;
     }
     .background h4 {
