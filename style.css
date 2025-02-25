@@ -1,4 +1,3 @@
-/* Reset & Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +5,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Full Page Background */
 .background {
-    background: black;
+    background: linear-gradient(135deg, #000000 60%, #1a1a1a);
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -16,154 +14,90 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
 }
 
-/* Text Styling */
-h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-}
-
-h4 {
-    font-size: 1.5rem;
-    color: white;
-}
-
-/* Glassmorphic Header */
 .header {
     position: fixed;
-    top: 0;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     height: 70px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 12px;
+    background: rgba(255, 0, 0, 0.05);
+    backdrop-filter: blur(10px) brightness(1.3);
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
     z-index: 1000;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4);
 }
 
-/* Logo */
 .logo {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: white;
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    white-space: nowrap;
 }
 
-/* Navigation Links */
 .nav-links {
     display: flex;
     gap: 15px;
 }
 
-/* Button Styling */
+h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ff0000;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 8px rgba(255, 0, 0, 0.6);
+}
+
+h4 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
 .btn-17 {
     position: relative;
-    padding: 12px 24px;
+    padding: 14px 28px;
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     color: white;
     background: transparent;
-    border: 2px solid white;
-    border-radius: 8px;
+    border: 2px solid #ff0000;
+    border-radius: 50px;
     cursor: pointer;
     overflow: hidden;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out, transform 0.3s;
+    display: inline-block;
 }
 
 .btn-17:hover {
-    color: black;
-    background: white;
-}
-
-/* Hamburger Menu (Hidden by Default) */
-.menu-toggle {
-    display: none;
-    background: transparent;
-    color: white;
-    font-size: 2rem;
-    border: none;
-    cursor: pointer;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 50%;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 0 0 12px 12px;
-        backdrop-filter: blur(15px);
-        padding: 10px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .background h1 {
-        font-size: 2.5rem;
-    }
-
-    .background h4 {
-        font-size: 1.2rem;
-    }
-}
-
-/* Button Animation */
-.btn-17,
-.btn-17 * {
-  border: 0 solid;
-  box-sizing: border-box;
-}
-
-.btn-17 {
-  background-color: #000;
-  background-image: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 100%;
-  font-weight: 900;
-  line-height: 1.5;
-  margin: 0;
-  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
-  padding: 0;
-  text-transform: uppercase;
-}
-
-.btn-17 {
-  border-radius: 99rem;
-  border-width: 2px;
-  padding: 0.8rem 3rem;
-  z-index: 0;
+    color: #ff0000;
+    background: #ff0000;
+    transform: scale(1.05);
 }
 
 .btn-17 .text-container {
-  display: block;
-  mix-blend-mode: difference;
+    display: block;
+    mix-blend-mode: difference;
 }
 
 .btn-17 .text {
-  display: block;
-  position: relative;
+    display: block;
+    position: relative;
 }
 
 .btn-17:hover .text {
-  animation: move-up-alternate 0.3s forwards;
+    animation: move-up-alternate 0.3s forwards;
 }
 
 @keyframes move-up-alternate {
@@ -183,7 +117,7 @@ h4 {
 
 .btn-17:after,
 .btn-17:before {
-  background: #fff;
+  background: #ff0000;
   content: "";
   display: block;
   height: 102%;
@@ -207,4 +141,67 @@ h4 {
 
 .btn-17:hover:after {
   transform: translateY(-102%);
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: #ff0000;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        width: 95%;
+        padding: 0 20px;
+    }
+    .background h1 {
+        font-size: 2.8rem;
+    }
+    .background h4 {
+        font-size: 1.5rem;
+    }
+    .btn-17 {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+    .logo {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(255, 0, 0, 0.1);
+        border-radius: 12px;
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .background h1 {
+        font-size: 2.3rem;
+    }
+    .background h4 {
+        font-size: 1.2rem;
+    }
+    .btn-17 {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
 }
